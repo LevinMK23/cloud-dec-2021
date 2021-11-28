@@ -1,30 +1,27 @@
 package com.geekbrains.chat.client;
 
-import java.io.Closeable;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 
 public class IoNet implements Closeable {
 
-    private final Callback callback;
+    //private final Callback callback;
     private final Socket socket;
     private final InputStream is;
     private final OutputStream os;
     private final byte[] buf;
 
-    public IoNet(Callback callback,
-                 Socket socket) throws IOException {
-        this.callback = callback;
+    public IoNet(
+            Socket socket) throws IOException {
+        //this.callback = callback;
         this.socket = socket;
         is = socket.getInputStream();
         os = socket.getOutputStream();
         buf = new byte[8192];
-        Thread readThread = new Thread(this::readMessages);
+/*        Thread readThread = new Thread(this::readMessages);
         readThread.setDaemon(true);
-        readThread.start();
+        readThread.start();*/
     }
 
     public void sendMsg(String msg) throws IOException {
@@ -32,7 +29,18 @@ public class IoNet implements Closeable {
         os.flush();
     }
 
-    private void readMessages() {
+
+    // метод отправки файла в облако, отправляем имя файла, потом отправляем сам файл
+    public void sendFile(String fileName) throws IOException {
+        FileInputStream fis = new FileInputStream("src\\main\\resources\\com\\geekbrains\\cloud\\" + fileName);
+        int read;
+        os.write((fileName + "$").getBytes(StandardCharsets.UTF_8));
+        while ((read = fis.read(buf)) != -1) {
+            os.write(buf, 0, read);
+        }
+    }
+
+/*    private void readMessages() {
         try {
             while (true) {
                 int read = is.read(buf);
@@ -42,7 +50,7 @@ public class IoNet implements Closeable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     @Override
     public void close() throws IOException {

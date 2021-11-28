@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6347053d-8d60-44a8-8db0-781326d6ac31" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/geekbrains/cloud/test1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/geekbrains/cloud/test2.txt" afterDir="false" />
+    <list default="true" id="6347053d-8d60-44a8-8db0-781326d6ac31" name="Default Changelist" comment="begin">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-dec-2021.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/ChatApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/CloudApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/CloudController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/IoNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/IoNet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/geekbrains/chat/client/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/geekbrains/chat/client/cloud.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +46,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -63,7 +66,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/com/geekbrains/calculator" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ChatApp">
+  <component name="RunManager" selected="Application.ServerIo">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -88,8 +91,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChatApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.chat.client.ChatApp" />
+    <configuration name="CloudApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.chat.client.CloudApp" />
       <module name="cloud-dec-2021" />
       <extension name="coverage">
         <pattern>
@@ -129,7 +132,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ChatApp" />
+        <item itemvalue="Application.CloudApp" />
         <item itemvalue="Application.ServerIo" />
         <item itemvalue="Application.Example" />
         <item itemvalue="Application.CalculatorApp" />
@@ -150,6 +153,21 @@
       <workItem from="1637859938603" duration="23000" />
       <workItem from="1637860007600" duration="4954000" />
     </task>
+    <task id="LOCAL-00001" summary="begin">
+      <created>1638114393572</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638114393572</updated>
+    </task>
+    <task id="LOCAL-00002" summary="begin">
+      <created>1638114549086</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638114549086</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,5 +183,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="begin" />
+    <option name="LAST_COMMIT_MESSAGE" value="begin" />
   </component>
 </project>
