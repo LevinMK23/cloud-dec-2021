@@ -14,7 +14,7 @@ public class Handler implements Runnable {
 
     public Handler(Socket socket) throws IOException {
         running = true;
-        buf = new byte[8192];
+        buf = new byte[1000000];
         this.socket = socket;
         is = socket.getInputStream();
         os = socket.getOutputStream();

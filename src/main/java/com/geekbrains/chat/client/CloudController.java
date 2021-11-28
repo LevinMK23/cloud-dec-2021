@@ -72,7 +72,7 @@ public class CloudController implements Initializable {
             selectedList = new HashSet<>();
             items = FXCollections.observableArrayList(dirs);
             listView.setItems(items);
-            listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+            listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
             listView.getSelectionModel().getSelectedItems().addListener(
                     (ListChangeListener.Change<? extends String> change) ->
                     {
@@ -87,6 +87,7 @@ public class CloudController implements Initializable {
     // отправляем коллекцию с выбранными файлами в метод отправки на сервер
     public void sendFileToCloud(ActionEvent actionEvent) throws IOException {
         for (String str : selectedList) {
+            //System.out.println(str.substring(6, str.indexOf("\t")));
             net.sendFile(str.substring(6, str.indexOf("\t")));
         }
         selectedList.clear();

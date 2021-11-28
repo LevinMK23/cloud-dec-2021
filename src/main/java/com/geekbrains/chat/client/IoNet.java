@@ -18,7 +18,7 @@ public class IoNet implements Closeable {
         this.socket = socket;
         is = socket.getInputStream();
         os = socket.getOutputStream();
-        buf = new byte[8192];
+        buf = new byte[1000000];
 /*        Thread readThread = new Thread(this::readMessages);
         readThread.setDaemon(true);
         readThread.start();*/
@@ -38,6 +38,7 @@ public class IoNet implements Closeable {
         while ((read = fis.read(buf)) != -1) {
             os.write(buf, 0, read);
         }
+        os.flush();
     }
 
 /*    private void readMessages() {

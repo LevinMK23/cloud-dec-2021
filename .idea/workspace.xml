@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6347053d-8d60-44a8-8db0-781326d6ac31" name="Default Changelist" comment="begin">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/ChatApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/CloudApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/CloudController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/CloudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/CloudController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/IoNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/IoNet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/geekbrains/chat/client/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/geekbrains/chat/client/cloud.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/server/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/server/Handler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/com/geekbrains/calculator" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ServerIo">
+  <component name="RunManager" selected="Application.CloudApp">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -167,7 +165,21 @@
       <option name="project" value="LOCAL" />
       <updated>1638114549086</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="begin">
+      <created>1638115009156</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638115009156</updated>
+    </task>
+    <task id="LOCAL-00004" summary="begin">
+      <created>1638115142219</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1638115142219</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,5 +199,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="begin" />
     <option name="LAST_COMMIT_MESSAGE" value="begin" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/CloudController.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
