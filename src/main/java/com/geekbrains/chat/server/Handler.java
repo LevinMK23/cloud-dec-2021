@@ -1,22 +1,20 @@
 package com.geekbrains.chat.server;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 
 public class Handler implements Runnable {
 
-    private boolean running;
     private final byte[] buf;
     private final InputStream is;
     private final OutputStream os;
     private final Socket socket;
+    private boolean running;
 
     public Handler(Socket socket) throws IOException {
         running = true;
-        buf = new byte[8192];
+        buf = new byte[1000000];
         this.socket = socket;
         is = socket.getInputStream();
         os = socket.getOutputStream();
@@ -29,11 +27,27 @@ public class Handler implements Runnable {
     @Override
     public void run() {
         try {
+            String temp = "";
+            boolean isNewFile = false;
             while (running) {
                 // вкрутить логику с получением файла от клиента
+                // ищем во входящем потоке символ "$" и парсим название файла
                 int read = is.read(buf);
-                String message = new String(buf, 0, read)
-                        .trim();
+                String message = new String(buf, 0, read);
+                if (message.contains("$") && !isNewFile) {
+                    temp = "src\\main\\resources\\com\\geekbrains\\storage\\" + message.substring(0, message.lastIndexOf("$"));
+                    isNewFile = true;
+                    continue;
+                }
+                // записываем на диск новый файл с пришедшим от клиента названием и наполняем его
+                if (isNewFile) {
+                    File file = new File(temp);
+                    FileOutputStream fos = new FileOutputStream(file);
+                    fos.write(buf, 0, read);
+                    fos.close();
+                    isNewFile = false;
+                    continue;
+                }
                 if (message.equals("quit")) {
                     os.write("Client disconnected\n".getBytes(StandardCharsets.UTF_8));
                     close();
